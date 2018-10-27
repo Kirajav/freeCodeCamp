@@ -9,37 +9,37 @@ Un Array es una colección de valores (u objetos) de tipos de datos similares (s
 **Sintaxis:**
 
 ```java
-dataType[] arrayName;   // preferred way 
+dataType[] arrayName;   // forma prefereida 
 ```
 
-Aquí, el `java datatype[]` describe que todas las variables indicadas después de que se crearán una instancia como matrices del tipo de datos especificado. Por lo tanto, si queremos crear una instancia de más matrices del tipo de datos similar, solo tenemos que agregarlas después del nombre de `java arrayName` especificado (no olvide separarlas solo con comas). Un ejemplo se da a continuación en la siguiente sección para referencia.
+Aquí, el `datatype[]` describe que todas las variables indicadas después de que se crearán una instancia como matrices del tipo de datos especificado. Por lo tanto, si queremos crear una instancia de más matrices del tipo de datos similar, solo tenemos que agregarlas después del nombre de `java arrayName` especificado (no olvide separarlas solo con comas). Un ejemplo se da a continuación en la siguiente sección para referencia.
 
 ```java
-dataType arrayName[];  //  works but not preferred way 
+dataType arrayName[];  //  funciona también, pero no es la forma preferida de escritura 
 ```
 
-Aquí, el `java datatype` solo describe que las variables indicadas después de que pertenecen a ese tipo de datos. Además, `java []` después del nombre de la variable describe que la variable es una matriz del tipo de datos especificado (no solo un valor u objeto de ese tipo de datos). Entonces, si queremos instanciar más matrices del tipo de datos similar, agregaremos los nombres de las variables justo después del ya especificado, separados por comas y cada vez tendremos que agregar `java []` después del nombre de la variable, de lo contrario la variable será instanciado como una variable de almacenamiento de valor ordinario (no una matriz). Para una mejor comprensión se da un ejemplo en la siguiente sección.
+Aquí, el `datatype` solo describe que las variables indicadas después de que pertenecen a ese tipo de datos. Además, `[]` después del nombre de la variable describe que la variable es un arreglo del tipo de datos especificado (no solo un solo valor u objeto de ese tipo de datos). Entonces, si queremos instanciar más matrices del tipo de datos similar, agregaremos los nombres de las variables justo después del ya especificado, separados por comas y cada vez tendremos que agregar `[]` después del nombre de la variable, de lo contrario la variable será instanciado como una variable de almacenamiento de valor ordinario (no una matriz). Para una mejor comprensión se da un ejemplo en la siguiente sección.
 
 ## Fragmentos de código de la sintaxis anterior:
 
 ```java
-double[] list1, list2; // preferred way 
+double[] list1, list2; // forma preferida 
 ```
 
 El fragmento de código anterior crea una instancia de 2 matrices de nombres de tipo doble list1 y list2.
 
 ```java
-double list1[], list2; // works but not preferred way 
+double list1[], list2; // funciona pero no es la forma preferida 
 ```
 
-En el fragmento de código anterior, una matriz de tipo de datos con doble nombre list1 y una variable simple de tipo de datos con doble nombre list2 (No debe confundirse con el nombre **list2** . Los nombres de variables no tienen nada que ver con el tipo de variable).
+En el fragmento de código anterior, una matriz de tipo doble de nombre list1 y una variable simple de tipo doble nombre list2 (No debe confundirse con el nombre **list2** . Los nombres de variables no tienen nada que ver con el tipo de variable).
 
-Nota: la `double list[]` estilos `double list[]` no se prefiere, ya que proviene del lenguaje C / C ++ y se adoptó en Java para dar cabida a los programadores de C / C ++. Además, es más fácil de leer: puede leer que se trata de una "lista de doble matriz denominada" que no es "una lista de doble llamada que es una matriz"
+Nota: El estilo de escritura `double list[]` no se prefiere, ya que proviene del lenguaje C/C++ y se adoptó en Java para dar cabida a los programadores de C/C++. Además, es más fácil de entender: se puede interpretar que se trata de un "arreglo (array) doble de nombre list" y no "un doble llamado list que es un arreglo (array)"
 
 ## Creando Arrays:
 
 ```java
-dataType[] arrayName = new dataType[arraySize]; 
+dataType[] arrayName = new dataType[arraySize]; //Donde 'arraySize' representa cualquier valor entero mayor o igual a cero
 ```
 
 ## Fragmentos de código de la sintaxis anterior:
@@ -57,18 +57,18 @@ dataType[] arrayName = {value_0, value_1, ..., value_k};
 ## Fragmentos de código de la sintaxis anterior:
 
 ```java
-double[] list = {1, 2, 3, 4}; 
+double[] lista = {1, 2, 3, 4}; 
  
- The code above is equivalent to: 
+ El código anterior es equivalente a: 
  double[] list = new double[4]; 
- *IMPORTANT NOTE: Please note the difference between the types of brackets 
- that are used to represent arrays in two different ways. 
+/**NOTA IMPORTANTE: Por favor nota la diferencia entre los tipos de corchetes y llaves que son usados para representar arreglos(arrays) en dos diferentes formas. 
+*/
 ```
 
 ## Accediendo a Arrays:
 
 ```java
-arrayName[index]; // gives you the value at the specified index 
+arrayName[index]; // se obtiene el valor en el indice (index) especificado. 
 ```
 
 ## Fragmentos de código de la sintaxis anterior:
@@ -88,7 +88,7 @@ Salida:
 arrayName[index] = value; 
 ```
 
-Nota: No puede cambiar el tamaño o el tipo de una matriz después de inicializarla. Nota: Sin embargo, puede restablecer la matriz como tal
+Nota: No puedes cambiar el tamaño o el tipo de una matriz después de inicializarla. Nota: Sin embargo, puedes restablecer la matriz como sigue:
 
 ```java
 arrayName = new dataType[] {value1, value2, value3}; 
@@ -96,25 +96,25 @@ arrayName = new dataType[] {value1, value2, value3};
 
 ## Tamaño de las matrices:
 
-Es posible encontrar el número de elementos en una matriz utilizando el "atributo de longitud". Debe notarse aquí que la `java length` es un **atributo** de cada matriz, es decir, un nombre de variable que almacena la longitud de la variable. No debe confundirse con un **método** de matriz, ya que el nombre es el mismo que el método de `java length()` correspondiente a las clases de cadena.
+Es posible encontrar el número de elementos en una matriz utilizando el "atributo _length_". Debe notarse aquí que `length` es un **atributo** de cada arreglo, es decir, un nombre de variable que almacena la longitud del arreglo. No debe confundirse como un **método** de arreglo, ya que el nombre es el mismo que el método de `length()` correspondiente a la clase _String_.
 
 ```java
-int[] a = {4, 5, 6, 7, 8}; // declare array 
- System.out.println(a.length); //prints 5 
+int[] a = {4, 5, 6, 7, 8}; // declaramos un array 
+ System.out.println(a.length); //imprime 5 
 ```
 
 ## Fragmentos de código de la sintaxis anterior:
 
 ```java
-list[1] = 3; // now, if you access the array like above, it will output 3 rather than 2 
+list[1] = 3; // ahora, si accedemos al arreglo como antes, ahora arrojará 3 en lugar de 2 
 ```
 
 _Ejemplo de código:_
 
 ```java
-int[] a = {4, 5, 6, 7, 8}; // declare array 
- for (int i = 0; i < a.length; i++){ // loop goes through each index 
-    System.out.println(a[i]); // prints the array 
+int[] a = {4, 5, 6, 7, 8}; // declaramos el arreglo 
+ for (int i = 0; i < a.length; i++){ // ciclo que pasa por cada índice del arreglo
+    System.out.println(a[i]); // imprime el arreglo. 
  } 
 ```
 
@@ -135,10 +135,10 @@ Las matrices bidimensionales (matrices 2D) se pueden considerar como una tabla c
 ```java
 int M = 5; 
  int N = 5; 
- double[][] a = new double [M][N]; //M = rows N = columns 
+ double[][] a = new double [M][N]; //M = filas N = columnas 
  for(int i = 0; i < M; i++) { 
     for (int j = 0; j < N; j++) { 
-        //Do something here at index 
+        //Hacer algo aquí, en este índice
     } 
  } 
 ```
@@ -155,22 +155,22 @@ Del mismo modo también se puede hacer una matriz 3D. Se puede visualizar como u
 
 ```java
 int a=2, b=3, c=4; 
- int[][][] a=new int[a][b][c]; 
+ int[][][] a=new int[a][b][c]; //es como un cubo de 2x3x4
 ```
 
-De manera similar, uno puede tener una serie de tantas dimensiones como desee, pero visualizar una matriz de más de 3 dimensiones es difícil de visualizar de una manera particular.
+De manera similar, uno puede tener una serie de tantas dimensiones como desee, pero visualizar una matriz de más de 3 dimensiones es difícil de visualizar.
 
 ### Matrices dentadas
 
 Las matrices dentadas son matrices multidimensionales que tienen un número determinado de filas pero un número variable de columnas. Las matrices dentadas se utilizan para conservar el uso de memoria de la matriz. Aquí hay un ejemplo de código:
 
 ```java
-int[][] array = new int[5][]; //initialize a 2D array with 5 rows 
- array[0] = new int[1]; //creates 1 column for first row 
- array[1] = new int[2]; //creates 2 columns for second row 
- array[2] = new int[5]; //creates 5 columns for third row 
- array[3] = new int[5]; //creates 5 columns for fourth row 
- array[4] = new int[5]; //creates 5 columns for fifth row 
+int[][] array = new int[5][]; //inicializa un arreglo 2D con 5 filas 
+ array[0] = new int[1]; //crea 1 columna para la primer fila 
+ array[1] = new int[2]; //crea 2 culumnas para la segunda fila 
+ array[2] = new int[5]; //crea 5 culumnas para la tercera fila 
+ array[3] = new int[5]; //crea 5 culumnas para la cuarta fila 
+ array[4] = new int[5]; //crea 5 culumnas para la quinta fila 
 ```
 
 Salida:
